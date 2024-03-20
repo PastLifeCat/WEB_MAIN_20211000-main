@@ -4,12 +4,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta name="author" content="20211000">
+    <meta name="keywords" content="computer">
+    <base href="http://127.0.0.1:5500">
     <title>LOL 메인화면</title>
+    <style>
+        table{
+            font-size: 20px;
+            color: white;
+        }
+        </style>
 </head>
 <body style="background-color: black;">
     <div style="display: flex; justify-content:center ;">
         <img src="image/LOGO.png" width="200" height="60">
-        <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white">게임정보
+        <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white">
+            <a href="https://www.leagueoflegends.com/ko-kr/how-to-play/" target="_blank">게임정보</a>
             새소식
             다운로드
             
@@ -24,10 +37,60 @@
             고객지원</h3>
     </div>
     <div style="display: flex; justify-content: center;">
-        <img src="image/Main.jpg" width="1200" height="768">
+        <a href="index.html" target="_blank">
+            <img src="image/Main.jpg" width="1200" height="768"></a>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <table border="1">
+            <caption>인기캐릭터</caption>
+            <!--<tbody>
+                <tr bgcolor="red">
+                    <td width="80" rowspan="2">사이온</td>
+                    <td>아리</td>
+                    <td>가렌</td>
+                    <td>가렌2</td>
+                    <td>가렌3</td>
+                </tr>
+                <tr bgcolor="grey">
+                    <td>아리</td>
+                    <td>가렌</td>
+                    <td>가렌2</td>
+                    <td>가렌3</td>
+                </tr>
+                <tr>
+                    <td bgcolor="blue"><b>카직스</b></td>
+                    <td>루시안</td>
+                    <td>루시안2</td>
+                    <td colspan="2"><font size="13">바이1, 바이 2</font></td>
+                </tr>
+            </tbody>-->
+            <tbody>
+                <tr bgcolor="red">
+                    <td>사이온</td>
+                    <td>아리</td>
+                    <td>가렌</td>
+                    <td>가렌2</td>
+                    <td>가렌3</td>
+                </tr>
+                <tr>
+                    <a href="https://www.leagueoflegends.com/ko-kr/" target="_blank"><td bgcolor="grey" colspan="5">롤 웹사이트 접속하기</td></a>
+                </tr>
+                <tr>
+                    <td bgcolor="blue"><b>카직스</b></td>
+                    <td>루시안</td>
+                    <td>루시안2</td>
+                    <td colspan="2"><font size="13">바이1, 바이 2</font></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+        </a>
+        
     </div>
     <hr>
     <div style="display: flex; justify-content: center;">
         <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';">라이엇 게임 회사 정보 2024년 x월 작성됨 </h3>
+        </div>
 </body>
 </html>
