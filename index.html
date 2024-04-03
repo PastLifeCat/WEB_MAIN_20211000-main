@@ -66,10 +66,10 @@
             </ul>
           </div>
           <a class="navbar-brand">게임정보</a>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" id="search_btn" type="submit">키워드 입력</button>
-          </form>
+          <form class="d-flex" role="search" onsubmit="return googleSearch();">
+            <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+            <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
+            </form>
         </div>
       </nav>
     <div style="display: flex; justify-content:center ;">
