@@ -101,7 +101,7 @@ if (passwordValue === '')
     loginForm.submit();
     };
 
-
+    document.getElementById("login_btn").addEventListener('click', check_input);
         
 
     function setCookie(name, value, expiredays) 
@@ -125,14 +125,25 @@ if (passwordValue === '')
                 {
                 return cookie_name[1];
                 }
-                session_check(); // 세션 유무 검사
             }
         }
     return ;
     }
-    
-    document.getElementById("login_btn").addEventListener('click', check_input);
 
+
+    function init()
+    {
+        const emailInput = document.getElementById('typeEmailX');
+        const idsave_check = document.getElementById('idSaveCheck');
+        let get_id = getCookie("id")
+
+        if (get_id)
+            {
+                emailInput.value = get_id;
+                idsave_check.checked = true;
+            }
+            session_check(); // 세션 유무 검사
+    }
 
 
 function session_set()
@@ -151,11 +162,23 @@ function session_set()
     }
 }
 
+function init_logined()
+{
+    if(sessionStorage)
+        {
+            decrypt_text();
+        }
+    else
+    {
+        alert("세션 스토리지 지원 x");
+    }
+}
+
 function session_get()
 { //세션 읽기
     if(sessionStorage)
     {
-        return sessionStorage.getItem("Session_Storage_test");
+        return sessionStorage.getItem("Session_Storage_pass");
     }
     else
     {
@@ -165,7 +188,7 @@ function session_get()
 
 function session_check()
 {//세션 검사
-    if (sessionStorage.getItem("Session_Storage_test"))
+    if (sessionStorage.getItem("Session_Storage_id"))
         {
             alert("이미 로그인 되셨습니다.");
             location.href='../login/index_login.html'; //로그인 된 페이지로 이동
