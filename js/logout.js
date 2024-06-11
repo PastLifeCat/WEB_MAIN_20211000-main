@@ -3,7 +3,7 @@ function logout()
     const logoutForm = document.getElementById('logout_form');
     const logoutBtn = document.getElementById('logout_btn');
     session_del(); // 세션 삭제
-    deleteCookie('name');
+    deleteCookie('id');
     location.href='../index.html'
 }
 document.getElementById("logout_btn").addEventListener('click', logout);

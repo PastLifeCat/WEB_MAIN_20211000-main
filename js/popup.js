@@ -59,12 +59,6 @@ function show_clock()
     setTimeout(show_clock, 1000); //1초마다 갱신
     }
 
-
-    /*function over(obj)
-    {
-        obj.src="image/LOGO.png";
-    }
-    */
     function out(obj)
     {
         obj.src="image/LOGO_2.png";

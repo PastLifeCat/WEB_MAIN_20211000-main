@@ -21,7 +21,7 @@ function join()
     let p_number = document.querySelector("#phoneNumber");
     let class_check = document.querySelector(".select form-control-lg");
 
-    form.action = "../login/join.html";
+    form.action = "../login/join_end.html";
     form.method = "get";
 
     if(f_name.value.length === 0 || l_name.value.length === 0 || b_day.value.length === 0 || email.value.length === 0 || p_number.value.length === 0)
