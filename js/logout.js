@@ -3,7 +3,8 @@ function logout()
     const logoutForm = document.getElementById('logout_form');
     const logoutBtn = document.getElementById('logout_btn');
     session_del(); // 세션 삭제
-    deleteCookie('id');
+    //deleteCookie('id');
+    setCookie("id", 0)
     location.href='../index.html'
 }
 document.getElementById("logout_btn").addEventListener('click', logout);
@@ -22,12 +23,19 @@ function session_del()
             }
 }
 
-function deleteCookie(name) 
+function setCookie(name, expiredays) 
+    {
+    var date = new Date();
+    date.setDate(date.getDate() + expiredays);
+    //document.cookie = escape(name) + "=" + escape(value) + "; expires=" + date.toUTCString() + "; path=/" + ";SameSite=None; Secure";
+    }
+
+/*function deleteCookie(name) 
 {
 	document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-deleteCookie("Reply");
+deleteCookie("Reply");*/
 
 /*function cookie_del()
 {

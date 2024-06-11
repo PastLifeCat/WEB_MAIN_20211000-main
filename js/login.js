@@ -108,7 +108,7 @@ if (passwordValue === '')
         }
     else
     { //아이디 체크 X
-    setCookie("id", emailValue.value, 0); //날짜를 0 - 쿠키 삭제
+    setCookie("id", emailValue, 0); //날짜를 0 - 쿠키 삭제
     }
     session_set(); // 세션 생성
     loginForm.submit();
