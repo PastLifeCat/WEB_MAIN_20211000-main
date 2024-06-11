@@ -27,22 +27,5 @@ function setCookie(name, expiredays)
     {
     var date = new Date();
     date.setDate(date.getDate() + expiredays);
-    //document.cookie = escape(name) + "=" + escape(value) + "; expires=" + date.toUTCString() + "; path=/" + ";SameSite=None; Secure";
+    document.cookie = escape(name) + "=" + "; expires=" + date.toUTCString() + "; path=/" + ";SameSite=None; Secure";
     }
-
-/*function deleteCookie(name) 
-{
-	document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
-
-deleteCookie("Reply");*/
-
-/*function cookie_del()
-{
-    const delCookie = (name) =>
-        {
-            console.log(name);
-            setCookie(name, '', 0);
-            alert("쿠키를 삭제합니다.")
-        }
-}*/
